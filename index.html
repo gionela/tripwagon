@@ -24,20 +24,33 @@
 
 <body>
     <div class="container mt-5">
+
         <!-- searchbar -->
         <section class="row searchbar pt-3">
+            <div class="col">
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend ">
-                    <span class="input-group-text bg-white border-0"><i class="fas fa-search text-black-50"></i></span>
-                </div>
-                <input type="text" class="form-control border-0" aria-label="Location">
-                <div class="input-group-append">
-                    <button class=" bg-info text-white px-5 border-0">Search</button>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend ">
+                        <span class="input-group-text bg-white border-0"><i
+                                class="fas fa-search text-black-50"></i></span>
+                    </div>
+                    <!-- replace with <datalist> -->
+                    <!-- <input type="text" class="form-control border-0" aria-label="Location"> -->
+                    <input list="location" class="form-control border-0" aria-label="Location">
+
+                    <datalist id="location">
+                        <option value="Paris">Paris</option>
+                        <option value="Toulouz">Toulouz</option>
+                        <option value="Marseille">Marseille</option>
+                    </datalist>
+
+                    <div class="input-group-append">
+                        <button class=" bg-info text-white px-5 border-0">Search</button>
+                    </div>
                 </div>
             </div>
-
         </section>
+
         <!-- booking -->
 
         <section class="row booking">
